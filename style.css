@@ -1,0 +1,315 @@
+/* ========================================
+   Academic Personal Homepage — Stylesheet
+   ======================================== */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #1a5276;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* ---------- Container (two-column layout) ---------- */
+.container {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 50px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  flex: 0 0 260px;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.name {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.affiliation {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.affiliation a {
+  color: #1a5276;
+}
+
+/* ---------- Contact / Links ---------- */
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 0.92rem;
+}
+
+.contact-info li a {
+  color: #444;
+}
+
+.contact-info li a:hover {
+  color: #2980b9;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #777;
+}
+
+/* ---------- Main Content ---------- */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- Sections ---------- */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e8e8e8;
+  margin-bottom: 16px;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+.section-note {
+  font-size: 0.88rem;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.highlight {
+  background: #fef9e7;
+  border-left: 3px solid #f4d03f;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---------- Publications ---------- */
+.pub-year h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a5276;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.pub-year:first-of-type h3 {
+  margin-top: 0;
+}
+
+.pub-list {
+  list-style: none;
+}
+
+.pub-list li {
+  margin-bottom: 18px;
+  padding-left: 14px;
+  border-left: 3px solid #dce6f0;
+  line-height: 1.6;
+}
+
+.pub-title a {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.pub-title a:hover {
+  color: #2980b9;
+}
+
+.pub-authors {
+  font-size: 0.93rem;
+  color: #555;
+}
+
+.pub-venue {
+  font-size: 0.93rem;
+  color: #666;
+}
+
+.pub-links {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.pub-links a {
+  font-size: 0.85rem;
+  color: #1a5276;
+  font-weight: 600;
+}
+
+.pub-links a:hover {
+  color: #2980b9;
+}
+
+/* ---------- Education ---------- */
+.edu-list {
+  list-style: none;
+}
+
+.edu-list li {
+  margin-bottom: 16px;
+}
+
+.edu-entry {
+  padding-left: 14px;
+  border-left: 3px solid #dce6f0;
+}
+
+.edu-degree {
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: #1a1a1a;
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.edu-detail {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.85rem;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 860px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .sidebar {
+    flex: none;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    max-width: 180px;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .avatar {
+    max-width: 150px;
+  }
+
+  .name {
+    font-size: 1.35rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .pub-list li {
+    padding-left: 10px;
+  }
+}
